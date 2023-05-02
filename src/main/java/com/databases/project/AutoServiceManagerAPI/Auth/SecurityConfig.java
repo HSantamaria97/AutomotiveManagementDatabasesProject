@@ -44,6 +44,7 @@ public class SecurityConfig{
                 .authorizeRequests()
                 .antMatchers("/").hasAnyAuthority("TECHNICIAN", "SERVICE_MANAGER", "ADMIN")
                 .antMatchers("/admin").hasAnyAuthority("ADMIN")
+                .antMatchers("/servicemanager").hasAnyAuthority("ADMIN","SERVICE_MANAGER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().permitAll()
