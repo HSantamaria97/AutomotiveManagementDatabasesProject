@@ -52,4 +52,7 @@ public class RepairController {
 
     @GetMapping("/getrepairbycustomerid")
     public ResponseEntity<List<Repair>> getRepairByCustomerId(long customerId){return ResponseEntity.ok(repairService.getRepairByCustomerId(customerId));}
+
+    @GetMapping("/getrepairbyvehicleid")
+    public ResponseEntity<List<Repair>> getRepairByVehicleId(long vehicleId){return ResponseEntity.ok(repairService.getRepairByVehicleId(vehicleId));}
 }

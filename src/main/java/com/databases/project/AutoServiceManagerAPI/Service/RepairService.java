@@ -61,4 +61,7 @@ public class RepairService {
      {
          return repairRepository.getRepairByCustomerID(customerId);
      }
+     public List<Repair> getRepairByVehicleId(long vehicleId){
+        return repairRepository.getRepairByVehicleId(vehicleId);
+     }
 }
